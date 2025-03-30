@@ -19,11 +19,11 @@ void startHeartbeat(IdevicePairingFile* pairing_file, TcpProviderHandle** provid
     struct sockaddr_in addr;
     memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
-    if (inet_pton(AF_INET, "10.7.0.1", &addr.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, "10.8.0.2", &addr.sin_addr) <= 0) {
         logger("DEBUG: Error converting IP address.");
         return;
     }
-    logger("DEBUG: Socket address created for IP 10.7.0.1");
+    logger("DEBUG: Socket address created for IP 10.8.0.2");
     
     IdeviceErrorCode err = IdeviceSuccess;
     
